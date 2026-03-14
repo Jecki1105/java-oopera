@@ -4,16 +4,16 @@ public class Theatre {
 
     public static void main(String[] args) {
 
-        Actor actorOne = new Actor("Александр", "Демьяненко", "мужчина", 170);
-        Actor actorTwo = new Actor("Екатерина", "Андреева", "женщина", 155);
-        Actor actorThree = new Actor("Глеб", "Попов", "мужчина", 181);
+        Actor actorOne = new Actor("Александр", "Демьяненко", Gender.MALE, 170);
+        Actor actorTwo = new Actor("Екатерина", "Андреева", Gender.FEMALE, 155);
+        Actor actorThree = new Actor("Глеб", "Попов", Gender.MALE, 181);
 
-        Director directorOne = new Director("Пётр", "Климов", "мужчина", 27);
-        Director directorTwo = new Director("Мария", "Петрова", "женщина", 16);
+        Director directorOne = new Director("Пётр", "Климов", Gender.MALE, 27);
+        Director directorTwo = new Director("Мария", "Петрова", Gender.FEMALE, 16);
 
-        Person musicAuthor = new Person("Филип", "Китов", "мужчина");
+        Person musicAuthor = new Person("Филип", "Китов", Gender.MALE);
 
-        Person choreographerOne = new Person("Макар", "Тишков", "мужчина");
+        Person choreographerOne = new Person("Макар", "Тишков", Gender.MALE);
 
         Show show = new Show("Марсельера", 90, directorTwo, new ArrayList<>());
 
