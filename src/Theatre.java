@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Theatre {
 
     public static void main(String[] args) {
@@ -15,12 +13,12 @@ public class Theatre {
 
         Person choreographerOne = new Person("Макар", "Тишков", Gender.MALE);
 
-        Show show = new Show("Марсельера", 90, directorTwo, new ArrayList<>());
+        Show show = new Show("Марсельера", 90, directorTwo);
 
-        Opera opera = new Opera("Мечта", 120, directorOne, new ArrayList<>(), musicAuthor, "Муза.. Моя. " +
+        Opera opera = new Opera("Мечта", 120, directorOne, musicAuthor, "Муза.. Моя. " +
                 "Летят ромашки над рекой, я как в первые мгновения лета, чувствую запах весны", 7);
 
-        Ballet ballet = new Ballet("Танец колокольчика", 60, directorTwo, new ArrayList<>(), musicAuthor,
+        Ballet ballet = new Ballet("Танец колокольчика", 60, directorTwo, musicAuthor,
                 "Бегу... Бегу... Как красиво вокруг! Птицы чирикают словно тонкие колокольчики звенят, " +
                         "оповещая нас о смене сезона года ", choreographerOne);
 
@@ -30,15 +28,15 @@ public class Theatre {
         ballet.addActors(actorThree);
 
         System.out.println("Выводим список актеров :");
-        show.printArray(show.listOfActors);
-        opera.printArray(opera.listOfActors);
-        ballet.printArray(ballet.listOfActors);
+        show.printArray(show.getListOfActors());
+        opera.printArray(opera.getListOfActors());
+        ballet.printArray(ballet.getListOfActors());
         System.out.println();
 
         System.out.println("Меняем актера в опере <Мечта> :");
         opera.changeActors("Екатерина", actorThree);
         System.out.println("Новый список актеров :");
-        opera.printArray(opera.listOfActors);
+        opera.printArray(opera.getListOfActors());
         System.out.println();
 
         System.out.println("Меняем актера в балете <Танец колокольчика>, которого нет в списке :");

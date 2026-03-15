@@ -1,21 +1,25 @@
-import java.util.ArrayList;
-
 public class MusicalShow extends Show {
 
-    Person musicAuthor;
-    String librettoText;
+    protected Person musicAuthor;
+    protected String librettoText;
 
-    public MusicalShow(String title, int duration, Director director, ArrayList<Actor> listOfActors,
+    public MusicalShow(String title, int duration, Director director,
                        Person musicAuthor, String librettoText) {
 
-        super(title, duration, director, listOfActors);
+        super(title, duration, director);
         this.musicAuthor = musicAuthor;
         this.librettoText = librettoText;
-
-
     }
 
     public void librettoPrint() {
         System.out.println(librettoText);
+    }
+
+    public Person getMusicAuthor() {
+        return musicAuthor;
+    }
+
+    public String getLibrettoText() {
+        return librettoText;
     }
 }
